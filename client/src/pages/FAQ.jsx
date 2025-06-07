@@ -4,7 +4,7 @@ function FAQ() {
   const [faqs, setFaqs] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:4000/api/faq")
+    fetch("https://candidate-00-thetop36-modules02.onrender.com/api/faq")
       .then(res => res.json())
       .then(data => setFaqs(data));
   }, []);
