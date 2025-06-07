@@ -17,7 +17,7 @@ function EcosystemSync() {
     ];
 
     for (let platform of platforms) {
-      await fetch("http://localhost:4000/api/enroll", {
+      await fetch("https://candidate-00-thetop36-modules02.onrender.com/api/enroll", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
