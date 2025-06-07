@@ -15,13 +15,13 @@ function PrizePanel() {
   };
 
   const fetchPrizes = async () => {
-    const res = await fetch("http://localhost:4000/api/prizes");
+    const res = await fetch("https://candidate-00-thetop36-modules02.onrender.com/api/prizes");
     const data = await res.json();
     setPrizes(data);
   };
 
   const handleSubmit = async () => {
-    await fetch("http://localhost:4000/api/prizes", {
+    await fetch("https://candidate-00-thetop36-modules02.onrender.com/api/prizes", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(form),
@@ -36,7 +36,7 @@ function PrizePanel() {
   };
 
   const createRaffle = async (prizeId) => {
-    await fetch("http://localhost:4000/api/raffles", {
+    await fetch("https://candidate-00-thetop36-modules02.onrender.com/api/raffles", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ prizeId }),
@@ -45,7 +45,7 @@ function PrizePanel() {
   };
 
   const markClaimed = async (prizeId) => {
-    await fetch(`http://localhost:4000/api/prizes/${prizeId}/claim`, {
+    await fetch(`https://candidate-00-thetop36-modules02.onrender.com/api/prizes/${prizeId}/claim`, {
       method: "PUT",
     });
     alert("Prize marked as claimed!");
